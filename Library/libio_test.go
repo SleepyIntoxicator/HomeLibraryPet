@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
-	"net/http"
 	"testing"
 	"time"
 )
@@ -83,29 +82,6 @@ func TestFileIO_LoadBooks(t *testing.T) {
 	fmt.Printf("[dd.mm.yyyy] %.2d.%.2d.%d\n", dd, mm, yyyy)
 }
 
-func TestTimeParse(t *testing.T) {
-	var loadTime time.Time
-	loadTime, err := time.Parse(time.RFC3339, "2020-03-05T00:00:00Z")
-	if err != nil {
-		log.Print(err)
-		log.Print(loadTime)
-		t.Fail()
-	}
-	fmt.Print(loadTime)
-}
-
-func TestDateParse(t *testing.T) {
-	var loadTime time.Time
-	loadTime, err := time.Parse("01.02.2006", "05.03.2020")
-	if err != nil {
-		log.Print(err)
-		log.Print(loadTime)
-		t.Fail()
-	}
-	fmt.Print(loadTime)
-
-}
-
 //FAILING TEST
 func TestParseJSON(t *testing.T) {
 	js := `{
@@ -126,8 +102,4 @@ func TestParseJSON(t *testing.T) {
 		t.Fail()
 	}
 	fmt.Println(book)
-}
-
-func TestDELETE(t *testing.T) {
-	http.ListenAndServeTLS
 }

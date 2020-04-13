@@ -121,9 +121,7 @@ func (book Book) getBooksHeaderWithTitleF(j []int, name string) string {
 
 	//TODO: ISSUE #3	CLOSED
 	// Add the handling of 3 situations
-	// Table width may be even 				% 2 == 0
-	// Table name length may be even		% 2 == 0
-	// Table width and name may be even	  ( % 2 == 0 && % 2 == 0 )
+	// Summary of table width and nameLength may be even
 	// *
 	// n = 19 w = 161		r = 0		| bWR = 0
 	// n = 20 w = 161		r = 0		| bWR = 1

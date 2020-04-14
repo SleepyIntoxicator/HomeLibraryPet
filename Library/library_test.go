@@ -121,15 +121,6 @@ func TestBooks_GetBooksTable(t *testing.T) {
 	fmt.Println(library.GetBooksTableWithTitle("Find books with params - name=Объектно flags=\"\""))
 }
 
-func Test(t *testing.T) {
-	a := len("All books from file bs.json")
-	fmt.Println(a)
-	a = len("long_long_long_title")	//20
-	fmt.Println(a)
-	a = len("long_long_long_long_title")//25
-	fmt.Println(a)
-}
-
 func Benchmark1(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		var db Database

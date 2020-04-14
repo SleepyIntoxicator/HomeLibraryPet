@@ -146,14 +146,6 @@ func (fio *FileIO) getFileContain(name string) ([]byte, error) {
 		if err != nil {
 			return nil, err
 		}
-
-		/*buf := make([]byte, MaxBaseSize)
-		_, err = file.Read(buf)
-		if err != nil {
-			return nil, err
-		}
-
-		buf = bytes.Trim(buf, "\x00")*/
 		fio.FileCached[name].cacheFile(content, timeModify)
 		return content, nil
 	}
